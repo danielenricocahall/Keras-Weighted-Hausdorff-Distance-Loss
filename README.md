@@ -1,7 +1,5 @@
-# Keras Custom Loss Functions #
-In this repository, you'll find implementations of various custom loss functions in Keras, primarily geared towards segmentations. These loss functions include:
+# Weighted Hausdorff Distance Loss #
+In this repository, you'll find an implementation of the weighted Hausdorff Distance Loss, described here (https://arxiv.org/abs/1806.07564). A majority of the work was just porting their PyTorch implementation (https://github.com/HaipengXiong/weighted-hausdorff-loss), but it should function identically.
 
-* Dice Similarity Coefficient (DSC) loss
-  * Log DSC loss (https://www.frontiersin.org/articles/10.3389/fncom.2019.00044/full)
-  * Cos Dice Loss (https://arxiv.org/abs/1807.04459)
-* Weighted Hausdorff Loss Function (https://arxiv.org/abs/1806.07564)
+## TODO ## 
+Add an example script.
