@@ -6,6 +6,25 @@ import math
 
 
 def cdist(A, B):
+    """
+    Computes the pairwise Euclidean distance matrix between two tensorflow matrices A & B, similiar to scikit-learn cdist.
+
+    For example:
+
+    A = [[1, 2],
+         [3, 4]]
+
+    B = [[1, 2],
+         [3, 4]]
+
+    should return:
+
+        [[0, 2.82],
+         [2.82, 0]]
+    :param A: m_a x n matrix
+    :param B: m_b x n matrix
+    :return: euclidean distance matrix (m_a x m_b)
+    """
     # squared norms of each row in A and B
     na = tf.reduce_sum(tf.square(A), 1)
     nb = tf.reduce_sum(tf.square(B), 1)
