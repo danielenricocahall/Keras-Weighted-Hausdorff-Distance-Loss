@@ -66,4 +66,5 @@ def weighted_hausdorff_distance(W, H, alpha):
                                    (y_true, y_pred),
                                    dtype=tf.float32)
         return K.mean(tf.stack(batched_losses))
+
     return hausdorff_loss
