@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+matplotlib = "*"
+keras = "==2.2.4"
+tensorflow = "==1.15.2"
+pytest = "*"
+scikit-learn = "*"
+
+[requires]
+python_version = "3.6"
