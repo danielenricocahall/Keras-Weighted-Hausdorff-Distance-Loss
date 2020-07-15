@@ -38,14 +38,14 @@ def cdist(A, B):
     return D
 
 
-def weighted_hausdorff_distance(W, H, alpha):
-    all_img_locations = tf.convert_to_tensor(cartesian([np.arange(W), np.arange(H)]), dtype=tf.float32)
-    max_dist = math.sqrt(W ** 2 + H ** 2)
+def weighted_hausdorff_distance(w, h, alpha):
+    all_img_locations = tf.convert_to_tensor(cartesian([np.arange(w), np.arange(h)]), dtype=tf.float32)
+    max_dist = math.sqrt(w ** 2 + h ** 2)
 
     def hausdorff_loss(y_true, y_pred):
         def loss(y_true, y_pred):
             eps = 1e-6
-            y_true = K.reshape(y_true, [W, H])
+            y_true = K.reshape(y_true, [w, h])
             gt_points = K.cast(tf.where(y_true > 0.5), dtype=tf.float32)
             num_gt_points = tf.shape(gt_points)[0]
             y_pred = K.flatten(y_pred)
